@@ -7,7 +7,7 @@ date: May 25, 2025
 
 # A Closed-Form Hypergeometric Product Formula for General SU(2) 3nj Recoupling Coefficients
 
-*{{ page.author }}*
+*Arcticoder*
 
 *May 25, 2025*
 
