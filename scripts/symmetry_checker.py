@@ -61,12 +61,9 @@ def main():
         print(f"j = {j}")
         print(f"  f(j)     = {original}")
         print(f"  f(rev j) = {reflected}")
-        print(f"  |diff|   = {diff}\n")
-
-    # Create DataFrame and save to CSV
+        print(f"  |diff|   = {diff}\n")    # Create DataFrame and save to CSV
     df = pd.DataFrame(data)
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    filename = os.path.join(data_dir, f'reflection_symmetry_{timestamp}.csv')
+    filename = os.path.join(data_dir, 'reflection_symmetry.csv')
     df.to_csv(filename, index=False)
     print(f"Results saved to: {filename}")
     

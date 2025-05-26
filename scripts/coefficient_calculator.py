@@ -115,8 +115,7 @@ def main():
     df = analyze_symmetry()
     
     # Save results to CSV
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    filename = os.path.join(data_dir, f'3nj_analysis_{timestamp}.csv')
+    filename = os.path.join(data_dir, '3nj_analysis.csv')
     df.to_csv(filename, index=False)
     print(f"Results saved to: {filename}")
     

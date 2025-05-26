@@ -13,4 +13,4 @@ github:
 
 # Other settings
 permalink: pretty
-exclude: ["README.md", "Gemfile", "Gemfile.lock", "*.tex", "*.aux", "*.log"]
+exclude: ["README.md", "Gemfile", "Gemfile.lock", "*.tex", "*.aux", "*.log", "index.html"]
