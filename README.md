@@ -2,16 +2,15 @@
 
 This repository contains a mathematical physics paper on a new closed-form expression for SU(2) 3nj recoupling coefficients.
 
+**View the paper online: [https://arcticoder.github.io/su2-3nj-closedform/](https://arcticoder.github.io/su2-3nj-closedform/)**
+
 ## Abstract
 
-We present a fully closed-form expression for the SU(2) 3nj recoupling coefficients associated to any trivalent graph. By cutting each edge of the coupling graph and computing matching numbers on the resulting components, one obtains for each edge a ratio ρ_e. The general 3nj symbol is then given as a product of hypergeometric factors:
-
-{3nj}({j_e}) = ∏_{e∈E} 1/(2j_e)! · ₂F₁(-2j_e,½;1;-ρ_e)
+We present a fully closed-form expression for the SU(2) 3nj recoupling coefficients associated to any trivalent graph. By cutting each edge of the coupling graph and computing matching numbers on the resulting components, one obtains for each edge a ratio. The general 3nj symbol is then given as a product of hypergeometric factors (see the paper for the complete mathematical expression).
 
 ## Repository Structure
 
-- `index.md` - Abstract and paper summary (Jekyll front page)
-- `full-paper.html` - Complete HTML version of the paper with MathJax
+- `index.md` - Complete paper with abstract and all sections (Jekyll front page)
 - `A Closed-Form Hypergeometric Product Formula for General SU(2) 3nj Recoupling Coefficients.tex` - Original LaTeX source
 - `A Closed-Form Hypergeometric Product Formula for General SU(2) 3nj Recoupling Coefficients.pdf` - PDF version of the paper
 
