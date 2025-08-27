@@ -1,71 +1,61 @@
-# A Closed-Form Hypergeometric Product Formula for General SU(2) 3nj Recoupling Coefficients
+```markdown
+# A Closed-Form Hypergeometric Product Formula for General SU(2) 3nj Recoupling Coefficients — Research Paper
 
-This repository contains a mathematical physics paper on a new closed-form expression for SU(2) 3nj recoupling coefficients.
+This repository hosts the LaTeX source, published PDF, and analysis scripts accompanying a research paper describing a closed-form hypergeometric product expression for SU(2) 3nj recoupling coefficients. The materials are intended for reproducibility and independent verification by researchers in mathematical physics.
 
-**View the paper online: [https://arcticoder.github.io/su2-3nj-closedform/](https://arcticoder.github.io/su2-3nj-closedform/)**
+**Paper (rendered):** https://arcticoder.github.io/su2-3nj-closedform/
 
-## Abstract
+## Abstract (concise)
 
-We present a fully closed-form expression for the SU(2) 3nj recoupling coefficients associated to any trivalent graph. By cutting each edge of the coupling graph and computing matching numbers on the resulting components, one obtains for each edge a ratio. The general 3nj symbol is then given as a product of hypergeometric factors involving these ratios.
+We present a closed-form product representation for SU(2) 3nj recoupling coefficients associated with trivalent graphs. The expression is constructed by cutting edges and computing matching-number-derived ratios; the 3nj symbol is expressed as a product of hypergeometric factors parameterized by these ratios. Readers should consult the paper for definitions, assumptions, and derivations.
 
-## Repository Structure
+## Repository Contents
 
-- `index.md` - Complete paper with abstract and all sections (Jekyll front page)
-- `A Closed-Form Hypergeometric Product Formula for General SU(2) 3nj Recoupling Coefficients.tex` - Original LaTeX source
-- `A Closed-Form Hypergeometric Product Formula for General SU(2) 3nj Recoupling Coefficients.pdf` - PDF version of the paper
-- `scripts/` - Directory containing Python scripts for analysis
-  - `coefficient_calculator.py` - Script for calculating and analyzing 3nj coefficients
-  - `symmetry_checker.py` - Script for checking reflection symmetry properties of 3nj coefficients
-- `data/` - Directory for generated output from analysis scripts
+- `index.md` — Paper landing page (Jekyll)
+- `<paper>.tex` and `<paper>.pdf` — LaTeX source and rendered PDF
+- `scripts/` — Analysis scripts (see below)
+- `data/` — Generated outputs for reproducing figures and tables
 
 ## Analysis Scripts
 
-### Coefficient Calculator (`scripts/coefficient_calculator.py`)
+### `scripts/coefficient_calculator.py`
 
-This script calculates SU(2) 3nj recoupling coefficients using the closed-form hypergeometric product formula and analyzes their properties.
+Computes 3nj coefficients using the closed-form formula and produces analysis outputs. Use for reproducing numerical experiments from the paper.
 
-**Features:**
-- Calculates 3nj symbols for arbitrary angular momentum configurations
-- Tests reflection symmetry properties
-- Generates analysis data for various test cases
-
-**Usage:**
+Usage (research-only):
 ```bash
-# Run from the repository root directory
-python scripts/coefficient_calculator.py
+python scripts/coefficient_calculator.py --out data/3nj_analysis.csv
 ```
 
-**Output:**
-- Prints analysis results to the console
-- Saves results to `data/3nj_analysis.csv`
+### `scripts/symmetry_checker.py`
 
-### Symmetry Checker (`scripts/symmetry_checker.py`)
+Checks symmetry properties (e.g., reflection) for selected 3nj configurations and produces `data/reflection_symmetry.csv`.
 
-This script specifically checks the reflection symmetry properties of 3nj symbols (particularly for the 15j-chain).
-
-**Features:**
-- Tests reflection symmetry across multiple test cases
-- Analyzes differences between original and reflected coefficient values
-
-**Usage:**
+Usage:
 ```bash
-# Run from the repository root directory
-python scripts/symmetry_checker.py
+python scripts/symmetry_checker.py --out data/reflection_symmetry.csv
 ```
-
-**Output:**
-- Prints symmetry analysis to the console
-- Saves results to `data/reflection_symmetry.csv`
 
 ## Requirements
 
-The scripts require the following Python packages:
-- mpmath
-- pandas
-- numpy
+- `mpmath`, `numpy`, `pandas` (install via `pip install -r requirements.txt`)
 
-## Related Works
+## Scope, Validation & Limitations
 
-- [Closed-Form Finite Recurrences for SU(2) 3nj Symbols](https://arcticoder.github.io/su2-3nj-recurrences/)
-- [Uniform Closed-Form Representation of SU(2) 12j Symbols](https://arcticoder.github.io/su2-3nj-uniform-closed-form/)
-- [A Universal Generating Functional for SU(2) 3nj Symbols](https://arcticoder.github.io/su2-3nj-generating-functional/)
+Scope
+- Audience: mathematical physicists and numerical analysts interested in SU(2) recoupling and hypergeometric representations.
+- Purpose: provide reproducible derivations and computational tools to evaluate and analyze the closed-form expressions.
+
+Validation & Reproducibility
+- Repro artifacts: include `data/*`, the exact commit id, and the command-line arguments used for runs when citing numeric results.
+- For UQ: if sampling or stochastic methods are used, include seeds and diagnostic outputs (convergence checks, error bounds).
+
+Limitations
+- The formulas and numeric examples are derived under the assumptions stated in the paper; applicability outside those assumptions should be validated by readers.
+
+## Citing
+
+If you use these results, cite the paper and include the commit id of this repository and any generated data artifacts.
+
+```
+
