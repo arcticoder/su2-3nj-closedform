@@ -47,7 +47,7 @@ Scope
 - Purpose: provide reproducible derivations and computational tools to evaluate and analyze the closed-form expressions.
 
 Validation & Reproducibility
-- Repro artifacts: include `data/*`, the exact commit id, and the command-line arguments used for runs when citing numeric results.
+- Repro artifacts: include `data/*`, the approximate commit id, and the command-line arguments used for runs when citing numeric results.
 - For UQ: if sampling or stochastic methods are used, include seeds and diagnostic outputs (convergence checks, error bounds).
 
 Limitations
